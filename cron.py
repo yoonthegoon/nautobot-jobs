@@ -5,6 +5,15 @@ def crontra(cron: str):
     """
     Translates crontab syntax to celery crontab
 
+    Supports following symbols:
+
+    • Asterisk (*) - signifies all possible values
+    • Comma (,) - lists multiple values
+    • Hyphen (-) - determine a range of values
+    • Slash (/) - divide a value ({* */12 * * *} runs every 12 hours)
+
+    No support for Last (L), Weekday (W), Number symbol (#), Question mark (?), and special @ strings.
+
     ↑↑↓↓←→←→ba+
     :return: crontab
     """
@@ -20,6 +29,6 @@ def crontra(cron: str):
 if __name__ == '__main__':
     print(
         crontra(
-            cron='*  * * * *'
+            cron='2 * 2W 2 3'
         )
     )
