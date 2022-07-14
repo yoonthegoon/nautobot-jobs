@@ -3,7 +3,7 @@ from celery.schedules import crontab
 
 def crontra(cron: str):
     """
-    Translates crontab syntax to celery crontab
+    Translates crontab syntax to celery crontab.
 
     Supports following symbols:
 
