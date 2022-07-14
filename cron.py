@@ -24,11 +24,3 @@ def crontra(cron: str):
                        day_of_week=day_of_week)
     except Exception as e:
         return e
-
-
-if __name__ == '__main__':
-    print(
-        crontra(
-            cron='2 * 2W 2 3'
-        )
-    )
