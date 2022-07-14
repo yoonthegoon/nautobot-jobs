@@ -15,6 +15,7 @@ def crontra(cron: str):
     No support for Last (L), Weekday (W), Number symbol (#), Question mark (?), and special @ strings.
 
     ↑↑↓↓←→←→ba+
+
     :return: crontab
     """
 
